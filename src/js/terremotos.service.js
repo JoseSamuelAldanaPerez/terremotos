@@ -3,7 +3,7 @@ export default class TerremotosService {
 	#API_URL;
 
 	constructor() {
-		this.#fechaActual = new Date().toLocaleDateString();
+		this.#fechaActual = new Date().toLocaleDateString().replaceAll("/", "-");
 		this.#API_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query";
 	}
 
